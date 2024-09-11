@@ -8,7 +8,7 @@ export default defineConfig({
       optimizer: {
         web: {
           enabled: true,
-          include: ['botframework-webchat-component', 'react-scroll-to-bottom']
+          include: ['botframework-webchat', 'botframework-webchat-component', 'react-scroll-to-bottom']
         }
       }
     }
