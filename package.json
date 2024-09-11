@@ -6,13 +6,17 @@
   "type": "module",
   "scripts": {
     "test": "vitest --environment=happy-dom",
-    "test:watch": "vitest -w --environment=happy-dom"
+    "test:watch": "vitest -w --environment=happy-dom",
+    "postinstall": "npm run postinstall:markdown-it-attrs-es5 && npm run postinstall:p-defer-es5 && npm run postinstall:abort-controller-es5",
+    "postinstall:markdown-it-attrs-es5": "cd node_modules/markdown-it-attrs-es5/ && npm run postinstall:esm",
+    "postinstall:p-defer-es5": "cd node_modules/p-defer-es5/ && npm run postinstall:esm",
+    "postinstall:abort-controller-es5": "cd node_modules/abort-controller-es5/ && npm run postinstall:esm"
   },
   "dependencies": {
-    "botframework-webchat": "4.16.0"
+    "botframework-webchat": "4.18.0"
   },
   "devDependencies": {
-    "happy-dom": "^13.3.8",
-    "vitest": "^1.2.2"
+    "happy-dom": "^15.7.3",
+    "vitest": "^2.0.5"
   }
 }

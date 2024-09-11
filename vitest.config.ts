@@ -2,5 +2,15 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  test: {},
+  test: {
+    environment: 'happy-dom',
+    deps: {
+      optimizer: {
+        web: {
+          enabled: true,
+          include: ['botframework-webchat-component', 'react-scroll-to-bottom']
+        }
+      }
+    }
+  }
 });

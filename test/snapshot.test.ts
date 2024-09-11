@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import 'botframework-webchat/dist/webchat.js';
+import WebChat from 'botframework-webchat';
 
 test('snapshot', () => {
   expect(WebChat).toMatchSnapshot();
